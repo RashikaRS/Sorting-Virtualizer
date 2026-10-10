@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sorting Algorithm Visualizer</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Sorting Algorithm Visualizer</h1>
+    <p>Watch how different sorting algorithms solve the same problem — step by step.</p>
+  </header>
+
+  <div class="controls">
+    <div class="control-group">
+      <label for="algoSelect">Algorithm</label>
+      <select id="algoSelect">
+        <option value="bubble">Bubble Sort</option>
+        <option value="selection">Selection Sort</option>
+        <option value="insertion">Insertion Sort</option>
+        <option value="quick">Quick Sort</option>
+        <option value="merge">Merge Sort</option>
+      </select>
+    </div>
+
+    <div class="control-group">
+      <label for="sizeRange">Array Size: <span id="sizeValue">40</span></label>
+      <input type="range" id="sizeRange" min="10" max="100" value="40" />
+    </div>
+
+    <div class="control-group">
+      <label for="speedRange">Speed</label>
+      <input type="range" id="speedRange" min="1" max="100" value="60" />
+    </div>
+
+    <button id="generateBtn">🔀 New Array</button>
+    <button id="sortBtn">▶ Sort</button>
+  </div>
+
+  <div class="stats">
+    <span>Comparisons: <strong id="comparisons">0</strong></span>
+    <span>Swaps: <strong id="swaps">0</strong></span>
+    <span id="statusText">Ready</span>
+  </div>
+
+  <div id="barsContainer" class="bars-container"></div>
+
+  <div class="legend">
+    <span><i class="dot default"></i> Unsorted</span>
+    <span><i class="dot comparing"></i> Comparing</span>
+    <span><i class="dot swapping"></i> Swapping</span>
+    <span><i class="dot sorted"></i> Sorted</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
